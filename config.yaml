@@ -1,0 +1,26 @@
+
+---
+-host:ubuntu
+- name:Prelim Exam
+  host:Managenode
+   become: true
+     task:
+       name: install latest python3 and pip3
+         apt:
+         -name:python3
+              pip3
+           state:latest
+             update_apache: yes 
+
+   -name:Install Maria DB
+       apt:
+          Mysql Server
+          
+
+- banner: "Ansible Managed node by Erebete"
+
+leafs:
+  hosts:
+    leaf01:
+      ansible_host: 192.168.56.101
+
